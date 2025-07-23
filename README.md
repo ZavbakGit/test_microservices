@@ -17,3 +17,30 @@ pip freeze > requirements.txt
     pip install -r requirements.txt
 ```
 
+
+## Сервис1 .env
+
+```
+# Конфигурация Сервиса 1
+SERVICE1_API_KEY=service1-secret-key-123
+SERVICE2_API_KEY=service2-secret-key-456  # Ключ для доступа к Сервису 2
+SERVICE2_URL=http://localhost:8003
+
+# Настройки сервера
+HOST=0.0.0.0
+PORT=8002
+REQUEST_TIMEOUT=5.0
+```
+
+## Сервис2 .env
+
+```
+# Конфигурация Сервиса 2
+SERVICE2_API_KEY=service2-secret-key-456  # Должен совпадать с SERVICE2_API_KEY в Сервисе 1
+
+# Настройки сервера
+HOST=0.0.0.0
+PORT=8003
+REQUEST_TIMEOUT=5.0
+```
+
